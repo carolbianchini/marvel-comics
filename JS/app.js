@@ -10,24 +10,29 @@ fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${timeStamp}&apike
     jsonParsed.data.results.forEach(element => {
         const srcImage = element.thumbnail.path + '.' + element.thumbnail.extension
         const nameHero = element.name
+        const desc = element.description
 
-        createDivHreo(srcImage, nameHero, divHero);
+        createDivHero(srcImage, nameHero, desc, divHero);
     });
 
     console.log(jsonParsed);
 })
 
-function createDivHreo(srcImage, nameHero, divToAppend) {
+function createDivHero(srcImage, nameHero, desc, divToAppend, ) {
     const divPai = document.createElement('div')
     const divFilho = document.createElement('div')
     const textName = document.createElement('text')
     const img = document.createElement('img')
+    const descricao = document.createElement('p')
+
 
     textName.textContent = nameHero
+    descricao.textContent = desc
     img.src = srcImage
 
     divFilho.appendChild(img)
     divFilho.appendChild(textName)
+    divFilho.appendChild(descricao)
     divPai.appendChild(divFilho)
     divToAppend.appendChild(divPai)
 
