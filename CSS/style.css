@@ -1,0 +1,47 @@
+body {
+    background-image: url('/imagens/fundo.jpg');
+    margin: 0 0 0 0;
+}
+
+header {
+    text-align: center;
+    background-color: #7f0d02;
+    height: 200px;
+}
+
+header img { 
+    text-align: center;
+    margin: 35px 0;
+}
+
+main {
+    margin: 0 10px;
+}
+
+#herois {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.personagem {
+    width: 25%;
+    margin: 50px 1px;
+    flex-direction: column;
+    background-color: #A52A2A;
+    text-align: center;
+    border-radius: 18px 18px 0 0;
+}
+
+.personagem div {
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.personagem img {
+    width: 100%;
+    height: 50vh;
+    /*margin: 10px;*/
+    border-radius: 18px 18px 0 0;
+}
