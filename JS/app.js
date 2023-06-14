@@ -14,8 +14,6 @@ fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${timeStamp}&apike
 
         createDivHero(srcImage, nameHero, desc, divHero);
     });
-
-    console.log(jsonParsed);
 })
 
 function createDivHero(srcImage, nameHero, desc, divToAppend, ) {
@@ -38,7 +36,6 @@ function createDivHero(srcImage, nameHero, desc, divToAppend, ) {
 
     divPai.classList.add('personagem');
 }
-
 
 function geraModal(){
 
